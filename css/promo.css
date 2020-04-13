@@ -135,7 +135,7 @@ a {
 .nav {
   display: grid;
   grid-template: auto/repeat(3, auto);
-  background-color: white;
+  background-color: #f8f9fa;
 }
 @media (max-width: 720px) {
   .nav {
