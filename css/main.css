@@ -202,7 +202,7 @@ a {
       padding: 40px 7%; } }
   .promo-wrapper {
     padding: 100px 1% 360px 57%;
-    background-image: url("img/sinii.jpg");
+    background-image: url("../img/sinii.jpg");
     background-size: cover;
     background-position: 0 center; }
     @media (min-width: 1100px) and (max-width: 1200px) {
@@ -323,7 +323,7 @@ a {
     margin-left: -32%;
     height: 60%;
     width: 60%;
-    background-image: url("img/autopark.png");
+    background-image: url("../img/autopark.png");
     background-size: cover;
     background-position: center center; }
   .success--drivers::before {
@@ -335,7 +335,7 @@ a {
     margin-left: -24%;
     height: 60%;
     width: 45%;
-    background-image: url("img/drivers.png");
+    background-image: url("../img/drivers.png");
     background-size: cover;
     background-position: center center; }
   .success--regularly::before {
@@ -347,7 +347,7 @@ a {
     margin-left: -24%;
     height: 60%;
     width: 45%;
-    background-image: url("img/regularly.png");
+    background-image: url("../img/regularly.png");
     background-size: cover;
     background-position: center center; }
   .success--prices::before {
@@ -359,7 +359,7 @@ a {
     margin-left: -24%;
     height: 60%;
     width: 45%;
-    background-image: url("img/prices.png");
+    background-image: url("../img/prices.png");
     background-size: cover;
     background-position: center center; }
   .success--cheapness::before {
@@ -371,7 +371,7 @@ a {
     margin-left: -24%;
     height: 60%;
     width: 45%;
-    background-image: url("img/cheapness.png");
+    background-image: url("../img/cheapness.png");
     background-size: cover;
     background-position: center center; }
   .success--license::before {
@@ -383,7 +383,7 @@ a {
     margin-left: -24%;
     height: 60%;
     width: 45%;
-    background-image: url("img/license.png");
+    background-image: url("../img/license.png");
     background-size: cover;
     background-position: center center; }
 
