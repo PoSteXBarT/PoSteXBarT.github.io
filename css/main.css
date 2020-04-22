@@ -631,21 +631,21 @@ a {
     display: block;
     width: 25px;
     height: 25px;
-    background-image: url("img/whatsapp.png");
+    background-image: url("../img/whatsapp.png");
     background-size: cover; }
   .social__link--instagram::before {
     content: "";
     display: block;
     width: 25px;
     height: 25px;
-    background-image: url("img/inst.png");
+    background-image: url("../img/inst.png");
     background-size: cover; }
   .social__link--vk::before {
     content: "";
     display: block;
     width: 25px;
     height: 25px;
-    background-image: url("img/vk.png");
+    background-image: url("../img/vk.png");
     background-size: cover; }
 
 /*# sourceMappingURL=main.css.map */
