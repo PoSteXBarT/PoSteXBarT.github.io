@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Откуда-Куда.ru | Грузоперевозки По всей России.</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="грузоперевозки">
+		<meta name="description" content="">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body itemscope itemtype="http://schema.org/Organization">
+		<span itemprop="name" class="hidden">Откуда-Куда</span>
+		<header class="header wrapper">
+			<h1 class="header__logo">otkuda-kuda.ru</h1>
+			<span class="header__offer offer">
+				Достаточно сообщить: <span class="offer__message">Откуда и Куда?</span>
+				<span class="hidden">по</span><strong class="offer__phone">+7 (916) 363-22-22</strong>
+			</span>
+			<button class="header__menu-btn hamburger" type="button"><div class="hamburger__line"></div></button>
+			<nav class="header__nav nav">
+				<h2 class="hidden">Навигация по сайту</h2>
+				<a class="nav__link" href="#about">О нас</a>
+				<a class="nav__link" href="#stocks">Акции</a>
+				<a class="nav__link" href="#contacts">Контакты</a>
+			</nav>
+		</header>
+		<main>
+			<div class="promo-wrapper" id="promo">
+				<section class="promo">
+					<h2 class="promo__header">
+						Нет времени разбираться?
+						<strong class="dspl-block">Подскажем!</strong>
+					</h2>
+					<form class="promo__order order" action="/order" method="POST">
+						<div>
+							<label for="start" class="order__label">Откуда?</label>
+							<input type="text" placeholder="Откуда" id="start" class="order__inpt" name="start">
+							<label for="finish" class="order__label">Куда?</label>
+							<input type="text" placeholder="Куда" id="finish" class="order__inpt" name="finish">
+						</div>
+						<div>
+							<label for="clientName" class="order__label">Как к Вам обращаться?</label>
+							<input type="text" placeholder="Иван?" id="clientName" class="order__inpt" name="clientName">
+							<label for="clientPhone" class="order__label">Ваш номер</label>
+							<input type="tel" value="+7 (___) ___-__-__" id="clientPhone" class="order__inpt" name="clientPhone">
+						</div>
+						<button class="order__send">Заказать звонок</button>
+						<div class="order__status-send"></div>
+					</form>
+				</section>
+			</div>
+			<section class="progress wrapper">
+				<h2 class="hidden">Достижения нашей компании</h2>
+				<span class="progress__header">Почему Вам стоит выбрать именно нас?</span>
+				<div class="progress__success">
+					<section class="success success--autopark">
+						<h3 class="success__header">Собственный автопарк</h3>
+						<span class="success__desc">Более 30 грузовых автомобилей</span>
+					</section>
+					<section class="success success--drivers">
+						<h3 class="success__header">Опытные водители</h3>
+						<span class="success__desc">Сотрудники со стажем не менее 10 лет</span>
+					</section>
+					<section class="success success--regularly">
+						<h3 class="success__header">Круглосуточный график</h3>
+						<span class="success__desc">Работаем 24 часа без  праздников и выходных</span>
+					</section>
+				</div>
+				<div class="progress__success">
+					<section class="success success--prices">
+						<h3 class="success__header">Честные цены</h3>
+						<span class="success__desc">Никаких дополнительных платежей</span>
+					</section>
+					<section class="success success--cheapness">
+						<h3 class="success__header">Удобные способы оплаты</h3>
+						<span class="success__desc">Возможность выбрать наиболее подходящий</span>
+					</section>
+					<section class="success success--license">
+						<h3 class="success__header">Полный набор пропусков</h3>
+						<span class="success__desc">Возможность въезда на территорию МКАД, ТТК, СК</span>
+					</section>
+				</div>
+			</section>
+			<section class="about wrapper" id="about" itemscope itemtype="http://schema.org/Service">
+				<h2 class="about__header">О нас</h2>
+				<span class="about__desc">Мы предлагаем <span itemprop="serviceAudience">предприятиям малого и среднего бизнеса (грузовладельцам)</span> комплексные услуги по перевозке Ваших грузов в любую точку <span itemprop="serviceArea">Москвы, МО и России</span>.</span>
+				<section class="about__dignities">
+					<section class="dignity">
+						<img class="dignity__img" src="img/1.jpg" alt="Демонстрация качества оказываемых услуг">
+						<div class="dignity__text">
+							<h3 class="dignity__text__header">Автопарк</h3>
+							<p class="dignity__text__desc">Предоставляя услугу, мы подготовились под все вариации потребностей клиента. Автомобили разной грузоподъемности и габаритов кузова всегда ориентированы под заказ. Где не справится один транспорт, всегда можем предложить два.</p>
+						</div>
+					</section>
+					<section class="dignity">
+						<div class="dignity__text">
+							<h3 class="dignity__text__header">Принципы</h3>
+							<p class="dignity__text__desc">Исправные транспортные средства и проверенная методика работы. Мы отвечаем за качество оказываемых услуг, относимся к вашему товару с должным вниманием. Для нас важно соблюсти временной регламент и при этом выполнить работу на должном уровне.</p>
+						</div>
+						<img class="dignity__img" src="img/2.jpg" alt="Демонстрации нашего автопарка">
+					</section>
+					<section class="dignity">
+						<img class="dignity__img" src="img/3.jpg" alt="Демонстрация организованности при оказании услуг">
+						<div class="dignity__text">
+							<h3 class="dignity__text__header">Логистика</h3>
+							<p class="dignity__text__desc">Для каждого клиента нашей компании разрабатывается оптимальная схема доставки груза, которая позволяет транспортировать груз самыми короткими путями с объездом сложных участков дороги.</p>
+						</div>
+					</section>
+					<section class="dignity">
+						<div class="dignity__text">
+							<h3 class="dignity__text__header">Возможности</h3>
+							<p class="dignity__text__desc">Грузовики нашей компании свободно проезжают в центральные районы столицы. Опытные водители выполнят перевозку груза в указанный срок и время. Тарифы по грузоперевозкам в нынешней ситуации снижены до минимума.</p>
+						</div>
+						<img class="dignity__img" src="img/4.jpg" alt="Отображение системно выполняемой работы">
+					</section>
+				</section>
+			</section>
+			<section class="stocks wrapper" id="stocks" itemscope itemtype="http://schema.org/Offer">
+				<div>
+					<h2 class="stocks__header">Акции</h2>
+					<p class="stocks__desc" itemprop="addOn">С целью соблюдения рекомендованных Всемирной Организацией Здравоохранения, мер безопасности в условиях пандемии Короновируса, мы запускаем акцию "Безконтактная грузоперевозка".</p>
+					<ul class="stocks__qualities">
+						<li class="stocks__qualities__clause">Предрейсовый осмотр водителей</li>
+						<li class="stocks__qualities__clause">Дезинфекция всего нашего автопарка</li>
+						<li class="stocks__qualities__clause" itemprop="acceptedPaymentMethod">Безконтактная оплата</li>
+					</ul>
+				</div>
+				<img class="stocks__img" src="img/tehnar.jpg" alt="Предрейсовый осмотр отправляющейся техники">
+			</section>
+			<section class="question" id="contacts">
+				<h2 class="hidden">Контакты</h2>
+				<span class="question__header">
+					Остались вопросы?
+					<b class="dspl-block">Свяжитесь с нами!</b>
+				</span>
+				<ul class="contacts question__contacts">
+					<li class="question__contacts__clause">
+						Позвоните нам на номер: <mark class="contacts__phone">+7 (916) 363-22-22</mark>
+						<span class="contacts__desc">*Мы доступны в любое время суток.</span>
+					</li>
+					<li class="question__contacts__clause">
+						<a class="contacts__order-call" href="#promo">Закажите звонок!</a>
+						<span class="contacts__desc">*Позвоним в удобное Вам время.</span>
+					</li>
+					<li class="question__contacts__clause">
+						Отправьте письмо на почту: <mark class="contacts__email">otkuda-kuda@yandex.ru</mark>
+						<span class="contacts__desc">*Ответим развернуто и быстро.</span>
+					</li>
+					<li class="question__contacts__clause" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						Физический адрес: <mark class="contacts__address"><span itemprop="postalCode">127018</span> <span itemprop="addressLocality">Москва</span>, <span itemprop="streetAddress">ул. Складочная, 1</span></mark>
+					</li>
+				</ul>
+			</section>
+		</main>
+		<footer class="footer wrapper">
+			<section class="footer__social social">
+				<h4 class="hidden">Мы в соц. сетях</h4>
+				<span class="social__link social__link--whatsapp">Whatsapp</span>
+				<span class="social__link social__link--instagram">Instagram</span>
+				<span class="social__link social__link--vk">VK</span>
+			</section>
+			<section class="footer__contacts contacts contacts--footer">
+				<h4 class="hidden">Контакты для связи</h4>
+				<span class="contacts__email contacts__email--footer" itemprop="email">otkuda-kuda@yandex.ru</span>
+				<span class="contacts__phone contacts__phone--footer" itemprop="telephone">+7 (916) 363-22-22</span>
+			</section>
+		</footer>
+		<script src="js/index.js"></script>
+	</body>
+</html>
