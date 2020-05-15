@@ -89,7 +89,8 @@ function phoneMask(keyW) {
 
             inptPhone.value = newValue;
         }
-    } else if (keyW.key.match(/[0-9]/) !== null) {
+    } else if (keyW.key.match(/^[0-9]/) !== null) {
+        alert(keyW.key);
         inptPhone.value = inptPhone.value.replace('_', keyW.key);
     }
 }
