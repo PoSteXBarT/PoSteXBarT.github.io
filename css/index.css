@@ -69,6 +69,7 @@ a {
   top: 0;
   width: 100%;
   z-index: 10;
+  overflow-x: hidden;
   background: #f8f9fa; }
   @media (max-width: 1200px) {
     .header {
@@ -630,24 +631,26 @@ a {
     .contacts--footer {
       grid-template: repeat(2, 1fr)/auto; } }
 .contacts__order-call {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 10px auto 0;
   border: 1px solid #2c5fa9;
-  padding: 4% 0;
   height: 50px;
   width: 65%;
   text-align: center;
   font-size: 1.2em; }
-  @media (max-width: 900px) {
-    .contacts__order-call {
-      padding: 4% 0; } }
   @media (max-width: 600px) {
     .contacts__order-call {
-      padding: 2.5% 0;
       width: 40%; } }
   @media (max-width: 500px) {
     .contacts__order-call {
-      padding: 3% 0;
       width: 50%; } }
   .contacts__order-call:hover {
     border-radius: 10px;
