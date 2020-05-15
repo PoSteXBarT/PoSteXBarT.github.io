@@ -234,9 +234,10 @@ a {
         font-size: 1.5em; } }
 
 .order {
-  display: grid;
   grid-template: repeat(2, auto)/repeat(2, 50%);
-  grid-column-gap: 7%; }
+  grid-column-gap: 7%;
+  display: grid;
+  position: relative; }
   @media (max-width: 720px) {
     .order {
       display: block; } }
@@ -257,6 +258,10 @@ a {
       color: black; }
     .order__inpt--invalid {
       border-color: red; }
+    .order__inpt--send-success {
+      border: 1px solid #28a745; }
+    .order__inpt--send-failed {
+      border: 1px solid red; }
   .order__send {
     grid-column: span 2;
     -webkit-transform: translateX(-15%);
@@ -268,7 +273,7 @@ a {
     display: block;
     height: 40px;
     background-color: white; }
-    .order__send:hover {
+    .order__send:hover, .order__send:focus {
       color: white;
       background-color: #2c5fa9; }
     @media (max-width: 720px) {
@@ -277,35 +282,33 @@ a {
         -webkit-transform: none;
                 transform: none;
         width: 65%; } }
+    .order__send--send-success {
+      border: 1px solid #28a745;
+      color: white;
+      background-color: #28a745; }
   .order__status-send {
-    position: fixed;
-    left: 30px;
-    bottom: 50px;
-    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
     height: 50px;
     width: 50px;
-    opacity: 0;
-    background-color: white; }
+    opacity: 0; }
     .order__status-send--success, .order__status-send--failed {
       opacity: 1; }
-    .order__status-send--success {
-      border: 1px solid #28a745; }
-      .order__status-send--success::before {
-        content: "\2713";
-        position: relative;
-        top: 10%;
-        left: 28%;
-        font-size: 2em;
-        color: #28a745; }
-    .order__status-send--failed {
-      border: 1px solid red; }
-      .order__status-send--failed::before {
-        content: "\00D7";
-        position: relative;
-        bottom: 25%;
-        left: 15%;
-        font-size: 3.5em;
-        color: red; }
+    .order__status-send--success::before {
+      content: "\2713";
+      position: relative;
+      top: 10%;
+      left: 28%;
+      font-size: 2em;
+      color: #28a745; }
+    .order__status-send--failed::before {
+      content: "\00D7";
+      position: relative;
+      bottom: 25%;
+      left: 15%;
+      font-size: 3.5em;
+      color: red; }
 
 .progress {
   display: grid;
@@ -535,6 +538,8 @@ a {
       padding-top: 50px;
       padding-bottom: 50px; } }
   .stocks__img {
+    -ms-flex-item-align: center;
+        align-self: center;
     width: 100%; }
   .stocks__header {
     margin-bottom: 25px;
