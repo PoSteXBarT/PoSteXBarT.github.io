@@ -36,13 +36,13 @@ orderSubmit.addEventListener('click', function (e) {
         if (input.value.length === 0) {
             if (valid) { valid = false }
             input.classList.add('order__inpt--invalid');
-        }/*elseif (input.name === 'clientPhone') {
-            if (input.value.match('#\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}#') === null) {
+        }else if (input.name === 'clientPhone') {
+            if (input.value.search('.7 .[0-9]{3}. [0-9]{3}-[0-9]{2}-[0-9]{2}') === -1) {
                 if (valid) { valid = false }
 
                 input.classList.add('order__inpt--invalid');
             }
-        }*/
+        };
     });
 
     if (valid) {
@@ -90,7 +90,7 @@ function phoneMask(keyW) {
             inptPhone.value = newValue;
         }
     } else if (keyW.key.match(/^[0-9]/) !== null) {
-        alert(keyW.key);
+        //alert(keyW.key);
         inptPhone.value = inptPhone.value.replace('_', keyW.key);
     }
 }
@@ -113,29 +113,19 @@ function opnClsNav() {
 function displaySendResults (status) {
     if (status) {
         status = 'success';
-    } else {
-        status = 'failed';
-    };
 
-    sendStatus.classList.add('order__status-send--' + status);
-    setTimeout(function () {
-        sendStatus.classList.remove('order__status-send--' + status);
-    }, 3000);
+        var arInptsOrderForm = orderForm.querySelectorAll('.order__inpt');
+        arInptsOrderForm.forEach(function (inpt) {
+            inpt.classList.add('order__inpt--send-' + status);
+            setTimeout(function () {
+                inpt.classList.remove('order__inpt--send-' + status);
+            }, 3000);
+        })
 
-    var arInptsOrderForm = orderForm.querySelectorAll('.order__inpt');
-    arInptsOrderForm.forEach(function (inpt) {
-        inpt.classList.add('order__inpt--send-' + status);
-        setTimeout(function () {
-            inpt.classList.remove('order__inpt--send-' + status);
-        }, 3000);
-    })
-
-    if (status === 'success') {
         orderSubmit.blur();
-
         orderSubmit.classList.add('order__send--send-' + status);
         setTimeout(function () {
             orderSubmit.classList.remove('order__send--send-' + status);
         }, 3000);
-    }
+    };
 }
