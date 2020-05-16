@@ -646,6 +646,7 @@ a {
   font-size: 1.2em; }
   @media (max-width: 600px) {
     .contacts__order-call {
+      margin-top: 0;
       width: 40%; } }
   @media (max-width: 500px) {
     .contacts__order-call {
