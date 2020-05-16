@@ -63,11 +63,12 @@ orderSubmit.addEventListener('click', function (e) {
 * Отменяет ввод всех символов кроме цифр и Backspace
 * */
 function phoneMask(keyW) {
-    alert('Нажата клавиша: ' + keyW.key);
+    console.log(keyW);
+    alert('Нажата клавиша: ' + keyW.keyCode + ', ' + keyW.code);
     keyW.preventDefault();
 
     //Если нажата клавиша Backspace, то ...
-    if (keyW.key.match(/backspace/i) !== null) {
+    /*if (keyW.key.match(/backspace/i) !== null) {
         alert('Удаление');
         //Если 5 символ в значении поля "_" ('+7 (_'), то ...
         if (inptPhone.value[4] !== '_') {
@@ -94,7 +95,7 @@ function phoneMask(keyW) {
     } else if (keyW.key.match(/^[0-9]/) !== null) {
         alert('Цифра');
         inptPhone.value = inptPhone.value.replace('_', keyW.key);
-    }
+    }*/
 }
 
 /*
