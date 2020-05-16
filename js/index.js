@@ -21,7 +21,7 @@ arNavLink.forEach(function (elem) {
 
 //Устанавливает шаблон ввода для поля номера телефона
 inptPhone.addEventListener('focus', function () {
-	inptPhone.addEventListener('keydown', phoneMask);//Если указываю анонимную функцию, то при каждом событии вешается слушатель
+	inptPhone.addEventListener('keypress', phoneMask);//Если указываю анонимную функцию, то при каждом событии вешается слушатель
 });
 
 //Отправка данных формы на сервер и отображение результата
@@ -63,9 +63,9 @@ orderSubmit.addEventListener('click', function (e) {
 * Отменяет ввод всех символов кроме цифр и Backspace
 * */
 function phoneMask(keyW) {
-    //alert('Нажата клавиша: ' + keyW.keyCode + ', ' + keyW.code);
-    console.log(JSON.stringify(keyW));
     keyW.preventDefault();
+    console.log(keyW);
+    alert('Нажата клавиша: ' + keyW.keyCode + ', ' + keyW.code);
 
     //Если нажата клавиша Backspace, то ...
     /*if (keyW.key.match(/backspace/i) !== null) {
