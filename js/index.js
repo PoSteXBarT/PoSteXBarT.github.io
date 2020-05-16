@@ -21,7 +21,7 @@ arNavLink.forEach(function (elem) {
 
 //Устанавливает шаблон ввода для поля номера телефона
 inptPhone.addEventListener('focus', function () {
-	inptPhone.addEventListener('keypress', phoneMask);//Если указываю анонимную функцию, то при каждом событии вешается слушатель
+	inptPhone.addEventListener('keyup', phoneMask);//Если указываю анонимную функцию, то при каждом событии вешается слушатель
 });
 
 //Отправка данных формы на сервер и отображение результата
