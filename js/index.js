@@ -65,7 +65,7 @@ orderSubmit.addEventListener('click', function (e) {
 function phoneMask(keyW) {
     console.log(keyW);
     alert('Нажата клавиша: ' + keyW.keyCode + ', ' + keyW.code);
-    alert(keyW);
+    alert(typeof keyW);
     keyW.preventDefault();
 
     //Если нажата клавиша Backspace, то ...
