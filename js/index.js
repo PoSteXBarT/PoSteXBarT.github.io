@@ -63,9 +63,8 @@ orderSubmit.addEventListener('click', function (e) {
 * Отменяет ввод всех символов кроме цифр и Backspace
 * */
 function phoneMask(keyW) {
-    console.log(keyW);
-    alert('Нажата клавиша: ' + keyW.keyCode + ', ' + keyW.code);
-    alert(typeof keyW);
+    //alert('Нажата клавиша: ' + keyW.keyCode + ', ' + keyW.code);
+    console.log(JSON.stringify(keyW));
     keyW.preventDefault();
 
     //Если нажата клавиша Backspace, то ...
