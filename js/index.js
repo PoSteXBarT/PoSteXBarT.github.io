@@ -67,52 +67,16 @@ orderSubmit.addEventListener('click', function (e) {
 * */
 function saveValue(keyW) {
     oldValue = inptPhone.value;
-
-    //Если нажата клавиша Backspace, то ...
-    /*if (keyW.key.match(/backspace/i) !== null) {
-        alert('Удаление');
-        //Если 5 символ в значении поля "_" ('+7 (_'), то ...
-        if (inptPhone.value[4] !== '_') {
-            var oldValue = inptPhone.value;
-
-            if (oldValue.includes('_')) {
-                var pos = oldValue.indexOf('_');
-
-                if (oldValue[pos - 1].match(/[()-]/) !== null) {
-                    pos = pos - 1;
-                } else if (oldValue[pos - 1].match(/\s/) !== null) {
-                    pos = pos - 2;
-                }
-
-                var newValue = oldValue.slice(0, pos - 1) + '_' + oldValue.slice(pos);
-            } else {
-                var posEndChar = inptPhone.value.length - 1;
-
-                var newValue = oldValue.slice(0, posEndChar) + '_';
-            }
-
-            inptPhone.value = newValue;
-        }
-    } else if (keyW.key.match(/^[0-9]/) !== null) {
-        alert('Цифра');
-        inptPhone.value = inptPhone.value.replace('_', keyW.key);
-    }*/
 }
 
 function phoneMask(inpt) {
     if (inpt.inputType === 'insertText') {
         if (inpt.data.match(/^[0-9]/) !== null) {
-            alert('Цифра');
-
             inptPhone.value = oldValue.replace('_', inpt.data);
         } else {
-            alert('Буква');
-
             inptPhone.value = oldValue;
         }
     } else if (inpt.inputType === 'deleteContentBackward') {
-        alert('Backspace');
-
         //Если 5 символ в значении поля "_" ('+7 (_'), то ...
         if (oldValue[4] !== '_') {
             if (oldValue.includes('_')) {
