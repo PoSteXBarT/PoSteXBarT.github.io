@@ -23,8 +23,8 @@ arNavLink.forEach(function (elem) {
 inptPhone.addEventListener('focus', function () {
     var oldValue;
 
-	inptPhone.addEventListener('keydown', phoneMask);
-    inptPhone.addEventListener('input', input);
+	inptPhone.addEventListener('keydown', saveValue);
+    inptPhone.addEventListener('input', phoneMask);
 });
 
 //Отправка данных формы на сервер и отображение результата
@@ -65,8 +65,7 @@ orderSubmit.addEventListener('click', function (e) {
 * Callback функция для нажатия клавиши при фокусе на поле
 * Отменяет ввод всех символов кроме цифр и Backspace
 * */
-function phoneMask(keyW) {
-    //keyW.preventDefault();
+function saveValue(keyW) {
     oldValue = inptPhone.value;
 
     //Если нажата клавиша Backspace, то ...
@@ -100,8 +99,43 @@ function phoneMask(keyW) {
     }*/
 }
 
-function input(inpt) {
-    alert(inpt.data);
+function phoneMask(inpt) {
+    if (inpt.inputType === 'insertText') {
+        if (inpt.data.match(/^[0-9]/) !== null) {
+            alert('Цифра');
+
+            inptPhone.value = oldValue.replace('_', inpt.data);
+        } else {
+            alert('Буква');
+
+            inptPhone.value = oldValue;
+        }
+    } else if (inpt.inputType === 'deleteContentBackward') {
+        alert('Backspace');
+
+        //Если 5 символ в значении поля "_" ('+7 (_'), то ...
+        if (oldValue[4] !== '_') {
+            if (oldValue.includes('_')) {
+                var pos = oldValue.indexOf('_');
+
+                if (oldValue[pos - 1].match(/[()-]/) !== null) {
+                    pos = pos - 1;
+                } else if (oldValue[pos - 1].match(/\s/) !== null) {
+                    pos = pos - 2;
+                }
+
+                var newValue = oldValue.slice(0, pos - 1) + '_' + oldValue.slice(pos);
+            } else {
+                var posEndChar = oldValue.length - 1;
+
+                var newValue = oldValue.slice(0, posEndChar) + '_';
+            }
+
+            inptPhone.value = newValue;
+        } else {
+            inptPhone.value = oldValue;
+        };
+    };
 }
 
 /*
