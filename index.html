@@ -13,10 +13,6 @@
 		<span itemprop="name" class="hidden">Откуда-Куда</span>
 		<header class="header wrapper">
 			<h1 class="header__logo">otkuda-kuda.ru</h1>
-			<span class="header__offer offer">
-				Достаточно сообщить: <span class="offer__message">Откуда и Куда?</span>
-				<span class="hidden">по</span><strong class="offer__phone"><a href="tel:+79163632222">+7 (916) 363-22-22</a></strong>
-			</span>
 			<button class="header__menu-btn hamburger" type="button"><div class="hamburger__line"></div></button>
 			<nav class="header__nav nav">
 				<h2 class="hidden">Навигация по сайту</h2>
@@ -32,22 +28,26 @@
 						Нет времени разбираться?
 						<strong class="dspl-block">Подскажем!</strong>
 					</h2>
-					<form class="promo__order order" action="/order" method="POST">
-						<div>
-							<label for="start" class="order__label">Откуда?</label>
-							<input type="text" placeholder="Откуда" id="start" class="order__inpt" name="start">
-							<label for="finish" class="order__label">Куда?</label>
-							<input type="text" placeholder="Куда" id="finish" class="order__inpt" name="finish">
-						</div>
-						<div>
+					<section class="contacts">
+						<h3 class="hidden">Способы связи с нами</h3>
+						<section class="contacts__offer offer">
+							<div class="offer__promo">
+								Достаточно сообщить:
+									<span class="offer__message">Откуда и Куда?</span>
+							</div>
+							<ul class="offer__contacts">
+								<li><a class="offer__contacts__clause" href="tel:+79163632222">+7 (916) 363-22-22</a></li>
+								<li><a class="offer__contacts__clause" href="mailto:otkuda-kuda@yandex.ru">otkuda-kuda@yandex.ru</a></li>
+							</ul>
+						</section>
+						<form class="contacts__order order" action="/order" method="POST">
 							<label for="clientName" class="order__label">Как к Вам обращаться?</label>
 							<input type="text" placeholder="Иван?" id="clientName" class="order__inpt" name="clientName">
 							<label for="clientPhone" class="order__label">Ваш номер</label>
 							<input type="tel" value="+7 (___) ___-__-__" id="clientPhone" class="order__inpt" name="clientPhone">
-						</div>
-						<button class="order__send">Заказать звонок</button>
-						<div class="order__status-send"></div>
-					</form>
+							<button class="order__send">Заказать звонок</button>
+						</form>
+					</section>
 				</section>
 			</div>
             <section class="progress wrapper">
@@ -82,6 +82,28 @@
                     </section>
                 </div>
             </section>
+			<section class="in-figures wrapper">
+				<h2 class="in-figures__header">Откуда-куда в цифрах</h2>
+				<div>
+					<div class="in-figures__quality">
+						<span class="in-figures__quality__value">1 500 000 км</span>
+						<div class="in-figures__quality__desc">Наши грузовые автомобили проезжают каждый год</div>
+					</div>
+					<div class="in-figures__quality">
+						<span class="in-figures__quality__value">8 300 км</span>
+						<div class="in-figures__quality__desc">Самая длинная поездка по заказу</div>
+					</div>
+					<div class="in-figures__quality">
+						<span class="in-figures__quality__value">25 лет</span>
+						<div class="in-figures__quality__desc">Наша команда работает в сфере грузоперевозок</div>
+					</div>
+					<div class="in-figures__quality">
+						<span class="in-figures__quality__value">114 клиентов</span>
+						<div class="in-figures__quality__desc">Ежемесячно пользуются нашими услугами</div>
+					</div>
+				</div>
+				<img class="in-figures__img" src="img/numbers.png">
+			</section>
 			<section class="about wrapper" id="about" itemscope itemtype="http://schema.org/Service">
 				<h2 class="about__header">О нас</h2>
 				<span class="about__desc">Мы предлагаем <span itemprop="serviceAudience">предприятиям малого и среднего бизнеса (грузовладельцам)</span> комплексные услуги по перевозке Ваших грузов в любую точку <span itemprop="serviceArea">Москвы, МО и России</span>.</span>
@@ -114,6 +136,102 @@
                         </div>
 						<img class="dignity__img" src="img/4.jpg" alt="Отображение системно выполняемой работы">
 					</section>
+				</section>
+			</section>
+			<section class="cases wrapper">
+				<h2 class="cases_header hidden">Цены типичных поездок</h2>
+				<section class="cases__item trip">
+					<h3 class="trip__header">По Москве</h3>
+					<table class="trip__criteria">
+						<caption class="hidden">Критерии поездки</caption>
+						<thead class="hidden">
+						<tr>
+							<th>Название</th>
+							<th>Значение</th>
+						</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="trip__criteria__name">Откуда?</td>
+								<td class="trip__criteria__value">2-я улица Энтузиастов</td>
+							</tr>
+							<tr>
+								<td class="trip__criteria__name">Куда?</td>
+								<td class="trip__criteria__value">Смоленская площадь</td>
+							</tr>
+							<tr>
+								<td class="trip__criteria__name">Что перевозили?</td>
+								<td class="trip__criteria__value">Вентиляционное оборудование</td>
+							</tr>
+							<tr>
+								<td class="trip__criteria__name">Затраченное время?</td>
+								<td class="trip__criteria__value">7 ч. 45 минут <span class="trip__note">(с учетом погрузки/разгрузки)</span></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="trip__price">11 900 руб. <span class="trip__note">(конечная стоимость)</span></div>
+				</section>
+				<section class="cases__item trip">
+					<h3 class="trip__header">По Московской области</h3>
+					<table class="trip__criteria">
+						<caption class="hidden">Критерии поездки</caption>
+						<thead class="hidden">
+							<tr>
+								<th>Название</th>
+								<th>Значение</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="trip__criteria__name">Откуда?</td>
+								<td class="trip__criteria__value">г. Электроугли</td>
+							</tr>
+							<tr>
+								<td class="trip__criteria__name">Куда?</td>
+								<td class="trip__criteria__value">г. Щелково</td>
+							</tr>
+							<tr>
+								<td class="trip__criteria__name">Что перевозили?</td>
+								<td class="trip__criteria__value">Силовой кабель</td>
+							</tr>
+							<tr>
+								<td class="trip__criteria__name">Затраченное время?</td>
+								<td class="trip__criteria__value">9 ч. 20 минут <span class="trip__note">(с учетом погрузки/разгрузки)</span></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="trip__price">14 800 руб. <span class="trip__note">(конечная стоимость)</span></div>
+				</section>
+				<section class="cases__item trip">
+					<h3 class="trip__header">По России</h3>
+					<table class="trip__criteria">
+						<caption class="hidden">Критерии поездки</caption>
+						<thead class="hidden">
+						<tr>
+							<th>Название</th>
+							<th>Значение</th>
+						</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="trip__criteria__name">Откуда?</td>
+								<td class="trip__criteria__value">г. Люберцы</td>
+							</tr>
+							<tr>
+								<td class="trip__criteria__name">Куда?</td>
+								<td class="trip__criteria__value">г. Краснодар</td>
+							</tr>
+							<tr>
+								<td class="trip__criteria__name">Что перевозили?</td>
+								<td class="trip__criteria__value">Корпусная мебель</td>
+							</tr>
+							<tr>
+								<td class="trip__criteria__name">Затраченное время?</td>
+								<td class="trip__criteria__value">2 суток 16 часов <span class="trip__note">(с учетом погрузки/разгрузки)</span></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="trip__price">89 900 руб. <span class="trip__note">(конечная стоимость)</span></div>
 				</section>
 			</section>
 			<section class="stocks wrapper" id="stocks" itemscope itemtype="http://schema.org/Offer">
